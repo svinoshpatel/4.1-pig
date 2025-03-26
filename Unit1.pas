@@ -13,7 +13,7 @@ type
 
   // Клас-нащадок TPetPig (домашня свинка)
   TPetPig = class(TPig)
-    //function Speak: String; //override;
+    function Speak: String; override;
   end;
 
   // Клас-нащадок TFarmPig (фермерська свиня)
@@ -37,10 +37,10 @@ implementation
 {$R *.dfm}
 
 // Реалізація методу Speak для домашньої свинки
-//function TPetPig.Speak: String;
-//begin
-  //Result := 'Хрю-хрю! Я домашня свинка!';
-//end;
+function TPetPig.Speak: String;
+begin
+  Result := 'Хрю-хрю! Я домашня свинка!';
+end;
 
 // Реалізація методу Speak для фермерської свині
 function TFarmPig.Speak: String;
